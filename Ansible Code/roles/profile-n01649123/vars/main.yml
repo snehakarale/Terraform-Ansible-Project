@@ -1,0 +1,7 @@
+---
+# vars file for profile-n01649123
+# path: /home/n01649123/automation/ansible/automation-project-ansible-n01649123/roles/profile-n01649123/vars
+
+file_path: /etc/profile
+username: "n01649123"
+timeout: 1500

@@ -1,0 +1,7 @@
+---
+# handlers file for webserver-n01649123
+
+ - name: start_httpd
+   systemd:
+     name: httpd
+     state: started

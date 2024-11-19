@@ -1,0 +1,12 @@
+---
+# vars file for datadisk-n01649123
+
+# defaults/main.yml
+
+
+part1_start: "1MiB"
+part1_end: "5GiB"
+part2_start: "6GiB"
+part2_end: "100%"
+part1_mount_point: "/part1"
+part2_mount_point: "/part2"

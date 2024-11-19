@@ -1,0 +1,9 @@
+---
+# vars file for user-n01649123
+
+group_name: cloudadmins
+group_list: cloudadmins,wheel
+user_list:
+ - user100
+ - user200
+ - user300

@@ -1,0 +1,14 @@
+---
+# tasks file for profile-n01649123
+# path: /home/n01649123/automation/ansible/automation-project-ansible-n01649123/roles/profile-n01649123/tasks
+
+- name: 1. File Update - Add lines to the /etc/profile file
+  blockinfile:
+    path: "{{ file_path }}"
+    insertafter: EOF
+    backup: yes           # Create a backup of the file before modifying it.
+    state: present        # If block is present, it will not be added again, preventing duplicate entries and if it is not already present it will be added.
+    block: |
+      #Test block added by Ansible……{{ username }}
+      export TMOUT={{ timeout }}
+

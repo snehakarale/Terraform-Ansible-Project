@@ -1,0 +1,35 @@
+---
+# tasks file for webserver-n01649123
+
+- name: A. Install Apache packages
+  yum:
+    name: httpd
+    state: latest
+  notify: start_httpd
+
+- name: C. Copy index.html to web server node1
+  copy:
+    src: vm1.html
+    dest: /var/www/html/index.html
+    mode: '0444'
+  when: ansible_facts['hostname'] == 'n01649123-vm1'
+
+- name: C. Copy index.html to web server node2
+  copy:
+    src: vm2.html
+    dest: /var/www/html/index.html
+    mode: '0444'
+  when: ansible_facts['hostname'] == 'n01649123-vm2'
+
+- name: C. Copy index.html to web server node1
+  copy:
+    src: vm3.html
+    dest: /var/www/html/index.html
+    mode: '0444'
+  when: ansible_facts['hostname'] == 'n01649123-vm3'
+
+- name: D. Ensure  Apache service is enabled and started
+  service:
+   name: httpd
+   enabled: yes
+   state: started

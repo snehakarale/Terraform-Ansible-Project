@@ -1,0 +1,11 @@
+---
+# playbook.yml
+
+- name: Main Playbook
+  hosts: linux
+  become: yes
+  roles:
+    - profile-n01649123
+    - user-n01649123
+    - datadisk-n01649123
+    - webserver-n01649123

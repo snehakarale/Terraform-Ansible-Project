@@ -1,0 +1,42 @@
+---
+# tasks file for user-n01649123
+
+- name: A. Create group cloudadmins
+  group:
+    name: "{{ group_name }}"
+    state: present
+
+- name: B. Create users
+  user:
+    name: "{{ item }}"
+    groups: "{{ group_list }}"
+    state: present
+  loop: "{{ user_list }}"
+
+- name: C. Generate SSH keys for users
+  user:
+    name: "{{ item }}"
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: /home/{{ item }}/.ssh/id_rsa
+    state: present
+  loop: "{{ user_list }}"
+  register: ssh_key_gen_results
+
+- name: Display SSH private key paths
+  debug:
+    msg: "SSH key for user {{ item }} created at /home/{{ item }}/.ssh/id_rsa"
+  loop: "{{ user_list }}"
+
+- name: Display public key paths
+  debug:
+    msg: "Public key for user {{ item }} is located at /home/{{ item }}/.ssh/id_rsa.pub"
+  loop: "{{ user_list }}"
+
+- name: D. Fetch the private key for user100 to local computer
+  fetch:
+    src: /home/user100/.ssh/id_rsa
+    dest: /home/n01649123/.ssh/user100_id_rsa
+    flat: yes
+  when: ansible_facts['hostname'] == 'n01649123-vm1'
+
