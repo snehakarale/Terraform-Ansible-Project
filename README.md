@@ -7,9 +7,9 @@ The project is divided into two parts:
 
 # Part 1: Terraform - Infrastructure Provisioning
 
-Provision Infrastructure on Azure: Using Terraform, resources such as virtual machines (Linux and Windows), networking (VNET, subnet), and databases (PostgreSQL) are automatically deployed.
-Modules: Each resource or service (e.g., Resource Groups, Virtual Networks, Virtual Machines) is defined in its own Terraform module.
-State Management: Terraform state is managed remotely on Azure to ensure consistent provisioning.
+Using Terraform, infrastructure resources such as Linux and Windows virtual machines, Virtual Networks (VNETs), subnets, and a PostgreSQL database are automatically deployed on Azure. Each resource is defined in its own Terraform module for modularity and reusability. Terraform state is managed remotely on Azure Blob Storage to ensure consistent, secure, and collaborative provisioning.
+
+
 
 # Part 2: Ansible - System Configuration
 
