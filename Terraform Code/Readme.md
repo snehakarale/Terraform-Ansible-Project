@@ -14,7 +14,7 @@ The goal is to create a fully automated infrastructure deployment with a set of 
 Child Modules:
 Each child module is responsible for provisioning a specific resource or set of resources.
 
-1. rgroup: Creates a resource group (HumberID-RG).
+1. rgroup: Creates a resource group.
 
 2. network: Creates a virtual network and subnet, and sets up a network security group with inbound rules for ports 22, 3389, 5985, and 80.
 
