@@ -1,6 +1,6 @@
 # Terraform-Ansible-Project
 
-Overview
+# Overview
 This project was developed as part of my college coursework to understand how to provision basic infrastructure using Terraform and configure the provisioned resources using Ansible.
 
 The project is divided into two parts:
