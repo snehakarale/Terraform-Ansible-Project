@@ -1,7 +1,7 @@
 # Terraform-Ansible-Project
 
 Overview
-This project automates the provisioning and configuration of infrastructure and systems using Terraform for infrastructure-as-code (IAC) and Ansible for configuration management.
+This project was developed as part of my college coursework to understand how to provision basic infrastructure using Terraform and configure the provisioned resources using Ansible.
 
 The project is divided into two parts:
 
