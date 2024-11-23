@@ -1,7 +1,7 @@
-# Terraform-Ansible-Project
+# Azure Cloud Infrastructure Automation
 
 # Overview
-This project was developed as part of my college coursework to understand how to provision basic infrastructure using Terraform and configure the provisioned resources using Ansible.
+This project, developed as part of my college coursework, challenges learners to apply Terraform, Ansible, and Microsoft Azure skills to design and deploy a highly available, scalable, and secure infrastructure on Azure. The goal is to automate both infrastructure provisioning and guest OS configuration, following cloud automation best practices. 
 
 The project is divided into two parts:
 
